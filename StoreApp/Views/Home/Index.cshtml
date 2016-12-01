@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-app="app">
+    <div ng-controller="AppCtrl as vm">
+        <div ng-form="inputForm">
+            <label for="message">Message</label>
+            <br>
+            <textarea ng-model="vm.msg" name="message"></textarea>
+            <br>
+            <button ng-click="vm.saveMsg()">Save</button>
+        </div>
+        <div class="messages">
+            <ul>
+                <li ng-repeat="m in vm.messages">
+                    {{m.Message}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
